@@ -54,10 +54,10 @@ const createCard = ({ name, role, email, img }) => {
     return `
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
-                <div class="col-lg-4">
-                    <img src="./${img}" alt="Profile photo">
+                <div class="col-4">
+                    <img src="./${img}" alt="Profile photo" class="img-fluid rounded-start" style="height: 100%">
                 </div>
-                <div class="col-lg-8">
+                <div class="col-8">
                     <div class="card-body">
                         <h5 class="card-title">${name}</h5>
                         <p class="card-text">${role}</p>
