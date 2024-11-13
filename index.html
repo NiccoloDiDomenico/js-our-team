@@ -16,7 +16,8 @@
 
     <!-- header -->
     <header>
-        <h1 class="text-center text-danger-emphasis fw-bold my-5">Meet our Team</h1>
+        <!-- Title -->
+        <h1 class="text-center fw-bold my-5">Meet our Team</h1>
     </header>
     <!-- /header -->
 
@@ -27,7 +28,9 @@
         <section>
             <div class="container">
                 <p class="text-center fw-bold">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit culpa sequi quis porro repellat. Aperiam amet possimus laborum, dolore recusandae, sint eaque eos, illo quaerat veritatis eligendi beatae sunt porro!
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit culpa sequi quis porro repellat.
+                    Aperiam amet possimus laborum, dolore recusandae, sint eaque eos, illo quaerat veritatis eligendi
+                    beatae sunt porro!
                 </p>
             </div>
         </section>
@@ -38,7 +41,8 @@
             <!-- container -->
             <div class="container my-5">
                 <!-- grid -->
-                <div id="team-members-grid" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center g-0">
+                <div id="team-members-grid"
+                    class="row row-cols-1 row-cols-md-2 row-cols-lg-3 justify-content-center g-0">
                     <!-- cards -->
                     <!-- <div class="card mb-3" style="max-width: 540px;">
                         <div class="row g-0">
@@ -61,6 +65,52 @@
             <!-- /container -->
         </section>
         <!-- /Member section -->
+
+        <!-- Form section -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col- col-md-8 col-lg-8">
+                        <h3>La nostra passione</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae numquam dolor aut voluptate
+                            labore deserunt laborum nihil ipsum doloremque, officiis enim corrupti exercitationem illum
+                            blanditiis, illo sed quam aliquid! Pariatur?
+                            Dolorum, est exercitationem? Voluptas, debitis. Dolorum laudantium ipsa quibusdam illum
+                            perspiciatis iusto esse accusantium atque maxime veritatis aliquid ut sint reiciendis natus
+                            sapiente dicta sit architecto suscipit voluptatum, consectetur deserunt.
+                            Nihil ipsam, non, dolorem ad cumque adipisci nam dolore odio error, obcaecati tempore? Quos
+                            exercitationem accusantium ullam modi labore quaerat. Voluptas eveniet excepturi pariatur
+                            hic consequatur, aliquid ut tenetur ipsa!
+                        </p>
+                    </div>
+                    <div class="col- col-md-4 col-lg-4">
+                        <h3>Aggiungi un membro del team</h3>
+                        <form id="add-member-form" class="d-flex flex-column">
+                            <div class="mb-3 ">
+                                <label for="name" class="form-label">Inserisci il nome</label>
+                                <input type="text" class="form-control" id="name" required autocomplete="off">
+                            </div>
+                            <div class="mb-3 ">
+                                <label for="role" class="form-label">Inserisci il ruolo</label>
+                                <input type="text" class="form-control" id="role" required required autocomplete="off">
+                            </div>
+                            <div class="mb-3 ">
+                                <label for="email" class="form-label">Inserisci l'email</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                    required required autocomplete="off">
+                            </div>
+                            <div class="mb-3">
+                                <label for="file" class="form-label">Carica la tua foto</label>
+                                <input class="form-control" type="file" id="file" required autocomplete="off">
+                              </div>
+                            <button type="submit" class="btn btn-primary ">Invia</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Form section -->
 
     </main>
     <!-- /main -->

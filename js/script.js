@@ -43,12 +43,24 @@ console.log(`Team Members:`, teamMembers);
 
 //   ELEMENTS
 const teamMembersGridElement = document.getElementById("team-members-grid")
+const addMemberFormElement = document.getElementById("add-member-form")
 
-console.log(teamMembersGridElement);
+console.log(teamMembersGridElement, addMemberFormElement);
+
+// INPUTS
+const inputs = document.querySelectorAll("#add-member-form input")
+const nameInputs = document.getElementById("name")
+const roleInputs = document.getElementById("role")
+const emailInputs = document.getElementById("email")
+const fileInputs = document.getElementById("file")
+
+console.log(inputs, nameInputs, roleInputs, emailInputs, fileInputs);
+
 
 
 // FUNCTIONS
 
+// Cards section
 // Funzione che crea la card membro
 const createCard = ({ name, role, email, img }) => {
     return `
@@ -77,15 +89,48 @@ const renderTeamMembersCards = () => {
     for (let i = 0; i < teamMembers.length; i++) {
         const currentMembers = teamMembers[i];
         // console.log(currentMembers);
-        
+
         const card = createCard(teamMembers[i]);
         items += card;
         // console.log(items);
-        
+
     }
     teamMembersGridElement.innerHTML = items;
 };
 
+// Form section
+
+const handleSubmit = (event) => {
+    event.preventDefault();
+    // console.log(event);
+
+    // Ottengo i valori degli input
+    const name = nameInputs.value.trim()
+    const role = roleInputs.value.trim()
+    const email = emailInputs.value.trim()
+    const image = fileInputs.value.trim()
+
+    console.log(name, role, email, image);
+
+    // Creo un nuovo ogetto con le proprietà dei valori presi prima
+    const newMember = {
+        name,
+        role,
+        email,
+        image
+    }
+
+    // Aggiungo il nuovo ogetto all'array principale
+    teamMembers.push(newMember);
+    console.log(teamMembers);
+
+    renderTeamMembersCards();
+
+    // Reset del form
+    addMemberFormElement.reset();
+}
+
 // LOGIC
 renderTeamMembersCards();
 
+addMemberFormElement.addEventListener("submit", handleSubmit);
